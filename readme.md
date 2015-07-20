@@ -2,7 +2,7 @@
 
 ## Part 2 - Active Record and Schema
 * Create a `landlord_schema.sql` It should contain the following:
-  - Persons table (with the follow attributes):
+  - Tenants table (with the follow attributes):
     - id
     - name
     - age
@@ -22,14 +22,14 @@
 * Connect to the database with ruby
 
 * Define AR classes /w associations in the `models` folder for:
-  - Person
+  - Tenant
   - Apartment
 
 * Create a Seed file that (follow comments in `seed.rb`):
   - Creates at least 3 instances of the apartment class
-  - Creates at least 9 instances of the Person class. At least 5 should belong to an apartment
-  - queries for all instances of the Person class and stores it in a variable of your choice
-  - queries for all instances of the Person class that belong to one of the Apartments you created and stories it in a variable of your choosing.
+  - Creates at least 9 instances of the Tenant class. At least 5 should belong to an apartment
+  - queries for all instances of the Tenant class and stores it in a variable of your choice
+  - queries for all instances of the Tenant class that belong to one of the Apartments you created and stories it in a variable of your choosing.
   - Updates attributes using attribute helper methods for one of the objects you've created
   - Saves an object that you updated using attribute helpers to the Database
   - Updates an object using the update methods
