@@ -1,3 +1,3 @@
 class Apartment < ActiveRecord::Base
-  has_many :persons
+  has_many :tenants
 end
