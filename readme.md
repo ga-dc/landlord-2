@@ -20,7 +20,7 @@
 
 * Connect to the database with ruby
 
-* Define AR classes /w associations for:
+* Define AR classes /w associations in the `models` folder for:
   - Person
   - Apartment
 
