@@ -41,3 +41,5 @@ Apartment.all[2].tenants.create([
 # update an object using the update method
 
 # delete an object
+
+binding.pry
