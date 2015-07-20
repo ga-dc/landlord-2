@@ -10,6 +10,7 @@
     - apartment_id
 
   - Apartments table (with the follow attributes):
+    - id
     - address
     - monthly_rent
     - sqft
