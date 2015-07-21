@@ -1,4 +1,15 @@
 # don't forget to load dependencies!
+require "bundler/setup"
+require "pg"
+require "active_record"
+require "pry"
+
+require_relative "../models/apartment"
+require_relative "../models/tenant"
+require_relative "/db"
+
+Apartment.destroy_all
+Tenant.destroy_all
 
 # create at least 3 objects of the apartment class
 
@@ -15,3 +26,6 @@
 # update an object using the update method
 
 # delete an object
+
+
+binding.pry
