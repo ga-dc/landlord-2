@@ -6,8 +6,6 @@ CREATE TABLE tenants (
   name TEXT,
   age TEXT,
   gender TEXT
-
-
 );
 
 CREATE TABLE apartments(
@@ -17,5 +15,4 @@ CREATE TABLE apartments(
   sqft INT,
   num_beds INT,
   num_baths INT 
-
 );
