@@ -1,5 +1,10 @@
 # don't forget to load dependencies!
 require_relative "setup"
+
+# prevent re-seeding
+Apartment.destroy_all
+Tenant.destroy_all
+
 # create at least 3 objects of the apartment class
 Apartment.create([
   {address: "123 Philly Ave", monthly_rent: 1200, sqft: 2500, num_beds: 3, num_baths: 2},
@@ -36,6 +41,6 @@ Tenant.create([
 # delete an object
   Tenant.find_by(name: "Jon Snow").destroy
 
-binding.pry
+# binding.pry
 
 puts "Database has been seeded \n"
