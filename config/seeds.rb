@@ -1,5 +1,11 @@
-# don't forget to load dependencies!
+# load dependencies!
+require "bundler/setup"
+require "pg"
+require "active_record"
+require "pry"
 
+Tenant.destroy_all
+Doctor.destroy_all
 # create at least 3 objects of the apartment class
 
 # create at least 9 objects(at least 5 must be long to an apartment)
