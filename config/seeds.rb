@@ -36,7 +36,7 @@ Apartment.first.tenants
 apartment_1 = Apartment.find_by(address: "705 G Street")
 apartment_1.address = "704 G Street"
 
-# save that object you just updated to the database
+# save that object you just updated to the landlord database
 apartment_1.save
 
 # update an object using the update method
