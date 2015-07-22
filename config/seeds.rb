@@ -17,18 +17,18 @@ Apartment.create(address: "1982 Park Ave", monthly_rent: 2000, sqft: 1200, num_b
 Apartment.create(address: "785 Broad St", monthly_rent: 1000, sqft: 800, num_beds: 2, num_baths: 1)
 
 # create at least 9 objects(at least 5 must be long to an apartment)
-Tenant.create(name: "Bob", age: 22, gender: "m", apartment_id: Apartments.all[1].id)
-Tenant.create(name: "Alan", age: 48, gender: "m", apartment_id: Apartments.all[0].id)
-Tenant.create(name: "Susan", age: 45, gender: "f", apartment_id: Apartments.all[0].id)
-Tenant.create(name: "Tom", age: 33, gender: "m", apartment_id: Apartments.all[2].id)
-Tenant.create(name: "John", age:25, gender: "m", apartment_id: Apartments.all[2].id)
-Tenant.create(name: "Beth", age: 26, gender: "f", apartment_id: Apartments.all[1].id)
+Tenant.create(name: "Bob", age: 22, gender: "m", apartment_id: Apartment.all[1].id)
+Tenant.create(name: "Alan", age: 48, gender: "m", apartment_id: Apartment.all[0].id)
+Tenant.create(name: "Susan", age: 45, gender: "f", apartment_id: Apartment.all[0].id)
+Tenant.create(name: "Tom", age: 33, gender: "m", apartment_id: Apartment.all[2].id)
+Tenant.create(name: "John", age:25, gender: "m", apartment_id: Apartment.all[2].id)
+Tenant.create(name: "Beth", age: 26, gender: "f", apartment_id: Apartment.all[1].id)
 Tenant.create(name: "Alison", age: 22, gender: "f")
 Tenant.create(name: "Dave", age: 42, gender: "m")
 Tenant.create(name: "Paul", age: 32, gender: "m")
 
 # query for all objects of the Tenant class, store it in a variable
-all_tenants = Tenants.all
+all_tenants = Tenant.all
 
 # query for all instances of the Tenant class that belong to the first Apartment you created
 all_tenants.where(apartment_id: Apartment.first)
