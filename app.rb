@@ -93,11 +93,32 @@ while userInput != "q"
     Tenant.all.each_with_index do |tenant, i|
       puts "#{i+1}. #{tenant.name}"
     end
-    puts "** Enter Tenant Number to Modify/Evict **"
+    # puts "** Enter Tenant Number to Modify/Evict **"
     puts "** Enter a to Add Tenant **"
     puts "** Enter r to Return to Main Menu **"
     puts "** Enter q to Quit **"
-    tenantChoice = gets.chomp
-    puts "not working yet"
+    tenant_choice = gets.chomp
+    case tenant_choice
+    when "a"
+      puts "@@@@@@ Add Tenant @@@@@@"
+      puts "Name:"
+      new_tenant_name = gets.chomp
+      puts "Age (numbers only):"
+      new_tenant_age = gets.chomp.to_i
+      puts "Gender:"
+      new_tenant_gender = gets.chomp
+      puts "Which Apartment ID (numbers only):"
+      Apartment.all.each do |apartment|
+        puts "#{apartment.id}. #{apartment.address}"
+      end
+      new_tenant_apartment = gets.chomp.to_i
+      Tenant.create(name: new_tenant_name, age: new_tenant_age, gender: new_tenant_gender, apartment_id: new_tenant_apartment)
+    when "q"
+      userInput = "q"
+    when "r"
+      userInput = "run"
+    else
+      # puts "not working yet"
+    end
   end
 end
