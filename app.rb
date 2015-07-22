@@ -41,18 +41,52 @@ while userInput != "q"
     else
       temp = Apartment.all[(apartmentChoice.to_i - 1)]
       puts ">>>>>#{temp.address}<<<<<"
+      save_address = temp.address
       puts ">>#{temp.num_beds} bedroom, #{temp.num_baths} bathroom<<"
       full_bedrooms = 0
       temp.tenants.each_with_index do |tenant, i|
         puts "#{i+1}. #{tenant.name}"
         full_bedrooms += 1
       end
-      while temp.num_beds > full_bedrooms
-        puts "#{full_bedrooms + 1}. Vacant"
-        full_bedrooms += 1
+      vacant_bedrooms = full_bedrooms
+      while temp.num_beds > vacant_bedrooms
+        puts "#{vacant_bedrooms + 1}. Vacant"
+        vacant_bedrooms += 1
       end
-      puts "** Enter Number To Change/Lease to Tenant **"
+      puts "** Enter Vacant Number To Lease to Tenant **"
+      puts "** s to Sell Apartment **"
       puts "** q to Quit, r to Return to Main **"
+      apartment_change = gets.chomp
+      case apartment_change
+      when "s"
+        puts "Are you sure? y/n"
+        confirm_sale = gets.chomp
+        if confirm_sale == "y"
+          temp.destroy
+        end
+      when "q"
+        userInput = "q"
+      when "r"
+        userInput = "run"
+      else
+        if apartment_change.to_i > full_bedrooms
+          puts "Who do you want to install?"
+          Tenant.all.each_with_index do |tenant, i|
+            puts "#{i+1}. #{tenant.name}"
+          end
+          vacant_to_tenant = gets.chomp
+          Tenant.all[((vacant_to_tenant.to_i) -1)].update_attributes(apartment_id: Apartment.find_by(address: save_address).id)
+        # else
+        #   puts "Who do you want to replace #{temp.tenants[apartment_change.to_i - 1].name}?"
+        #   Tenant.all.each_with_index do |tenant, i|
+        #     if tenant.name != temp.tenants[apartment_change.to_i - 1].name
+        #       puts "#{i+1}. #{tenant.name}"
+        #     end
+        #   end
+        #   vacant_to_tenant = gets.chomp
+        #   Tenant.all[((vacant_to_tenant.to_i) -1)].update_attributes(apartment_id: Apartment.find_by(address: save_address).id)
+        end
+      end
     end
   when "2"
     puts "---------- Tenants -----------"
@@ -64,5 +98,6 @@ while userInput != "q"
     puts "** Enter r to Return to Main Menu **"
     puts "** Enter q to Quit **"
     tenantChoice = gets.chomp
+    puts "not working yet"
   end
 end
