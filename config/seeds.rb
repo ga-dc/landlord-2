@@ -1,4 +1,10 @@
 # don't forget to load dependencies!
+require "pg"
+require "active_record"
+require "pry"
+require_relative "../models/tenant.rb"
+require_relative "../models/apartment.rb"
+require_relative "../db/config.rb"
 
 # create at least 3 objects of the apartment class
 
