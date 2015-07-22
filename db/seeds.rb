@@ -7,6 +7,11 @@ require_relative "../models/apartment.rb"
 require_relative "../db/config.rb"
 
 # create at least 3 objects of the apartment class
+Apartment.create(
+{address:"234 Doom Street",monthly_rent: 2324,sqft:344,num_beds:3,num_baths:3},
+{address:"666 Abomination Way",monthly_rent:2342,sqft:540,num_beds:3,num_baths:4},
+{address:"123 Elm Street",monthly_rent:5463,sqft:244,num_beds:4,num_baths:6}
+)
 
 # create at least 9 objects(at least 5 must be long to an apartment)
 
