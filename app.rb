@@ -1,11 +1,3 @@
-#
-# require 'active_record'
-# require 'pry'
-#
-# require_relative 'models/apartment'
-# require_relative 'models/tenant'
-# require_relative 'config/db.rb'
-
 require 'active_record'
 require 'pry'
 
@@ -27,11 +19,12 @@ def menu
     puts "4. Change an existing apartment's rent"
     puts "5. Create a new tenant"
     puts "6. Update a tenant's residence/apartment"
-    puts "To make your selection, type 1-6, then press the 'enter' key."
+    puts "To make your selection, type 1-6, then press the 'enter' key. To exit, type 'exit.' "
 end
 
-in_menu = true
-while in_menu
+#figuring out how to do this took me a bit, and ultimately I peeked at the solution. I didn't want to copy it, so I used an 'until' loop instead of a 'while' loop for something different.
+exit_menu = false
+until exit_menu
     menu
     landlord_input = gets.chomp
     if landlord_input == "1"
@@ -73,5 +66,7 @@ while in_menu
         update_address = Apartment.find_by(address: apt_address).id
         Tenant.find_by(name: tenant_name).update(apartment_id: update_address)
         puts tenant_name + "'s apartment has been updated."
+    elsif landlord_input == "exit"
+        exit_menu = true
     end
 end
