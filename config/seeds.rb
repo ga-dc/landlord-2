@@ -16,6 +16,8 @@ require_relative "../models/Tenant"
 require_relative "db.rb"
 
 # don't forget to load dependencies!
+Tenant.destroy_all
+Apartment.destroy_all
 
 # create at least 3 objects of the apartment class
 
@@ -29,11 +31,16 @@ bob = Tenant.create(name: "Bob", age: 35, gender: "male");
 jane = Tenant.create(name: "Jane", age: 27, gender: "female");
 jack = Tenant.create(name: "Jack", age: 85, gender: "male");
 sara = Tenant.create(name: "Sara", age: 93, gender: "female");
-Apartment.all[1].tenants.create(name: "Toto", age: 1, gender: "female")
-Apartment.all[1].tenants.create(name: "Harry", age: 203, gender: "male")
-Apartment.all[2].tenants.create(name: "Margret", age: 22, gender: "female")
-Apartment.all[2].tenants.create(name: "George", age: 66, gender: "male")
-Apartment.all[3].tenants.create(name: "Steve", age: 99, gender: "male")
+lexington.tenants.create(name: "Toto", age: 1, gender: "female")
+lexington.tenants.create(name: "Harry", age: 203, gender: "male")
+tuscany.tenants.create(name: "Margret", age: 22, gender: "female")
+tuscany.tenants.create(name: "George", age: 66, gender: "male")
+heights.tenants.create(name: "Steve", age: 99, gender: "male")
+# Apartment.all[1].tenants.create(name: "Toto", age: 1, gender: "female")
+# Apartment.all[1].tenants.create(name: "Harry", age: 203, gender: "male")
+# Apartment.all[2].tenants.create(name: "Margret", age: 22, gender: "female")
+# Apartment.all[2].tenants.create(name: "George", age: 66, gender: "male")
+# Apartment.all[3].tenants.create(name: "Steve", age: 99, gender: "male")
 # query for all objects of the Tenant class, store it in a variable
 puts Tenant.all
 # query for all instances of the Tenant class that belong to the first Apartment you created
