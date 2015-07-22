@@ -1,8 +1,5 @@
 require_relative "setup"
 
-# Patient.destroy_all
-# Doctor.destroy_all
-
 # ======= create 3 apartments
 # id, address, monthly_rent, sqft, num_beds, num_baths
 

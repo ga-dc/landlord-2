@@ -1,3 +1,3 @@
 require_relative "config/setup"
 
-binding.pry		# loads pry after running app
+# binding.pry		# loads pry after running app

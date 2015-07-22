@@ -18,21 +18,3 @@ CREATE TABLE apartments (
 	num_baths INT
 );
 
--- Tenents table
-
--- id
--- name
--- age
--- gender
--- apartment_id
-
--- Apartments table
-
--- id
--- address
--- monthly_rent
--- sqft
--- num_beds
--- num_baths
-
-
