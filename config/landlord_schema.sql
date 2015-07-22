@@ -5,7 +5,8 @@ CREATE TABLE tenants (
   id SERIAL PRIMARY KEY,
   name TEXT,
   age TEXT,
-  gender TEXT
+  gender TEXT,
+  apartment_id INT
 );
 
 CREATE TABLE apartments(
@@ -14,5 +15,5 @@ CREATE TABLE apartments(
   monthly_rent INT,
   sqft INT,
   num_beds INT,
-  num_baths INT 
+  num_baths INT
 );
