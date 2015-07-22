@@ -67,6 +67,6 @@ until exit_menu
         Tenant.find_by(name: tenant_name).update(apartment_id: update_address)
         puts tenant_name + "'s apartment has been updated."
     elsif landlord_input == "exit"
-        exit_menu = true
+      exit_menu = true
     end
 end
