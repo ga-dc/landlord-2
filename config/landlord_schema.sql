@@ -16,4 +16,4 @@ CREATE TABLE apartments (
   sqft INT,
   num_beds INT,
   num_baths INT
-);
+);open 
