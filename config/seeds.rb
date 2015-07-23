@@ -5,7 +5,7 @@ require 'pry'
 
 require_relative '../models/apartment'
 require_relative '../models/tenant'
-require_relative '../config/db.rb'
+require_relative 'db'
 
 Apartment.destroy_all
 Tenant.destroy_all
