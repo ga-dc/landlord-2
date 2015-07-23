@@ -18,15 +18,15 @@ Tenant.create(name: "Barack", age: "52", gender: "M")
 Tenant.create(name: "Brad", age: "27", gender: "M")
 Tenant.create(name: "Betsy", age: "31", gender: "F")
 # query for all objects of the Tenant class, store it in a variable
-# Tenant.all
+Tenant.all
 # query for all instances of the Tenant class that belong to the first Apartment you created
-# Tenant.first
+Tenant.first
 # update any one of your objects you've created using attribute helper methods
-
+first_apt = Apartment.firstfirst_apt.monthly_rent=3000
 # save that object you just updated to the database
-
+first_apt.save
 # update an object using the update method
-# condo = Apartment.find_by(address: "333")
-# Tenant.find_by(name: "Brian").update(apartment_id: condo.id)
+condo = Apartment.find_by(address: "333")
+Tenant.find_by(name: "Brian").update(apartment_id: condo.id)
 # delete an object
-# Tenant.find_by(name: "Betsy").destroy
+Tenant.find_by(name: "Betsy").destroy
