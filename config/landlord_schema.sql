@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS persons;
+DROP TABLE IF EXISTS tenants;
 
 DROP TABLE IF EXISTS apartments;
 
 --  will drop the tables everytime I merge with ruby
 --  i.e., loading the schema
---  psql -d database < something_schema.sql
+--  psql -d database < something_schema.sql  -- this command merges the schema
 
-CREATE TABLE persons(
+CREATE TABLE tenants(
   id SERIAL PRIMARY KEY,
   name TEXT,
   age INT,

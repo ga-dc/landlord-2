@@ -1,5 +1,5 @@
 class Apartment < ActiveRecord::Base
-  has_many :persons
+  has_many :tenants
 end
 
 # AR class.  singular and capitalized by convention
