@@ -28,13 +28,14 @@ donatello = Tenant.create(name: "Babe", age: 23, gender: "M")
 michaelangelo = Tenant.create(name: "Bob", age: 29, gender: "M")
 raphael = Tenant.create(name: "Waite", age: 33, gender: "M")
 # query for all objects of the Tenant class, store it in a variable
-
+tenants = Tenant.all
 # query for all instances of the Tenant class that belong to the first Apartment you created
-
+apt1_tenants = Tenant.where(apartment: "apartment1")
 # update any one of your objects you've created using attribute helper methods
-
+leonardo.gender = "Turtle"
 # save that object you just updated to the database
-
+leonardo.save
 # update an object using the update method
-
+michaelangelo.update(gender: "Turtle")
 # delete an object
+donatello.destroy
