@@ -1,17 +1,16 @@
-# don't forget to load dependencies!
+require_relative "setup"
 
-# create at least 3 objects of the apartment class
+Apartment.destroy_all
+Tenant.destroy_all
 
-# create at least 9 objects(at least 5 must be long to an apartment)
+westminster = Apartment.create (address: "920 Westminster Street", monthly_rent: 2400, sqft: 650, num_beds: 1, num_baths: 1)
+circle = Apartment.create(address: "2000 Mass Ave", monthly_rent: 2100, sqft: 600, num_beds: 1, num_baths: 1)
+fancy = Apartment.create(address: "52 Swann Street", monthly_rent: 3200, sqft: 1150, num_beds: 2, num_baths: 2)
 
-# query for all objects of the Tenant class, store it in a variable
+Tenant.create(name: "Bob Smith", age: 25, gender: "male", circle)
+Tenant.create(name: "Maggie Johnson", age: 35, gender: "male", fancy)
+Tenant.create(name: "John Johnson", age: 33, gender: "male", fancy)
+Tenant.create(name: "Larson Magoo", age: 28, gender: "male", westminster)
+Tenant.create(name: "Donald Crump", age: 23, gender: "male", westminster)
 
-# query for all instances of the Tenant class that belong to the first Apartment you created
-
-# update any one of your objects you've created using attribute helper methods
-
-# save that object you just updated to the database
-
-# update an object using the update method
-
-# delete an object
+all_tenants = tenants.all
