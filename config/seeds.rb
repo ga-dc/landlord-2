@@ -1,3 +1,5 @@
+require_relative "setup"
+
 # don't forget to load dependencies!
 
 # create at least 3 objects of the apartment class
