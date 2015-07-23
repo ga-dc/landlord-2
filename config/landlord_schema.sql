@@ -2,16 +2,16 @@ DROP TABLE IF EXISTS apartments;
 DROP TABLE IF EXISTS tenants;
 
 CREATE TABLE apartments (
-  id SERIAL PRIMARY KEY
+  id SERIAL PRIMARY KEY,
   address TEXT NOT NULL,
   monthly_rent TEXT,
   sqft INT,
   num_beds INT,
-  num_baths INT,
+  num_baths INT
 );
 
 CREATE TABLE tenants (
-  id SERIAL PRIMARY KEY
+  id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   age INT,
   gender TEXT,
