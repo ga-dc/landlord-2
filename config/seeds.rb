@@ -6,9 +6,9 @@ require "pg"
 require "pry"
 require "active_record"
 
-require_relative "config/db"
-require_relative "models/apartment"
-require_relative "models/tenant"
+require_relative "../config/db"
+require_relative "../models/apartment"
+require_relative "../models/tenant"
 
 Apartment.destroy_all
 Tenant.destroy_all
