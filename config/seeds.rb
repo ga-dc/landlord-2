@@ -1,13 +1,11 @@
 require_relative "setup"
 
 Apartment.destroy_all
-Patient.destroy_all
-
+Tenant.destroy_all
 
 Allison = Apartment.create(apartment_name: "Allison", address: "1205 Allison", monthly_rent: "900", sqft: "750", num_beds: "2", num_baths: "1", renters: "1")
 Buchanan = Apartment.create(apartment_name: "Buchanan", address: "112 Buchanan", monthly_rent: "1200", sqft: "800", num_beds: "4", num_baths: "3", renters: "2")
 Crittenden = Apartment.create(apartment_name: "Crittenden", address: "930 Crittenden", monthly_rent: "1500", sqft: "850", num_beds: "6", num_baths: "7", renters: "3")
-
 
 Tenant.create(first_name: "Henry", last_name: "Proctor", job: "Actor", apartment_id: Allison.id)
 Tenant.create(first_name: "Harrison", last_name: "Pickard", job: "PA", apartment_id: Allison.id)

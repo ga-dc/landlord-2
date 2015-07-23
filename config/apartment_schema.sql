@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS patients;
-DROP TABLE IF EXISTS doctors;
+DROP TABLE IF EXISTS apartments;
+DROP TABLE IF EXISTS tenants;
 
 CREATE TABLE apartments(
   id SERIAL PRIMARY KEY,
