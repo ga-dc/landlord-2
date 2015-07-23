@@ -1,5 +1,17 @@
 # don't forget to load dependencies!
+require "sinatra"
+require "sinatra/reloader"
+require "bundler/setup"
+require "pg"
+require "pry"
+require "active_record"
 
+require_relative "config/db"
+require_relative "models/apartment"
+require_relative "models/tenant"
+
+Apartment.destroy_all
+Tenant.destroy_all
 # create at least 3 objects of the apartment class
 
 # create at least 9 objects(at least 5 must be long to an apartment)
