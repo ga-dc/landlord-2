@@ -19,7 +19,7 @@ Tenant.create(name: "Tony Hawk", age: 60, gender: "Male")
 # query for all objects of the Tenant class, store it in a variable
 all_tenants = Tenant.all
 # query for all instances of the Tenant class that belong to the first Apartment you created
-apt_1A = Tenant.find_by(apartment_id: "1A")
+apt_1 = Tenant.where(apartment_id: 1)
 # update any one of your objects you've created using attribute helper methods
 les = Tenant.find_by(name: "Les Miles")
 les.age = 100
