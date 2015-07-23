@@ -1,3 +1,7 @@
+require_relative "setup"
+
+Apartment.destroy_all
+Tenant.destroy_all
 # don't forget to load dependencies!
 
 # create at least 3 objects of the apartment class
