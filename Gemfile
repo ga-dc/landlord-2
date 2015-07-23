@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem "pg" # this gem allows ruby to talk to postgres, "pg"
 gem "activerecord" # provides connection between ruby classes and relational database tables
