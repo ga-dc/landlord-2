@@ -1,6 +1,6 @@
-# Landlord Part 2
+# Landlord AR & Schema
 
-## Part 2 - Active Record and Schema
+## Active Record and Schema
 * Create a `landlord_schema.sql` It should contain the following:
   - Tenants table (with the follow attributes):
     - id
